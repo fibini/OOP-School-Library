@@ -10,20 +10,12 @@ class Person
   end
 
   def can_use_services?
-    if parent_permission || of_age?
-      puts true
-    else
-      puts false
-    end
+    @parent_permission || of_age?
   end
 
   private
 
   def of_age?
-    if @age >= 18
-      puts true
-    else
-      puts false
-    end
+    @age >= 18
   end
 end
