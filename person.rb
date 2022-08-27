@@ -1,7 +1,4 @@
 require './nameable'
-require './decorator'
-require './capitalizeDecorator'
-require './trimmerDecorator'
 require './rental'
 
 class Person < Nameable
@@ -9,9 +6,9 @@ class Person < Nameable
   attr_reader :id, :rental
 
   def initialize(age, name = 'Unknown', parent_permission: true)
-    super
+    super()
+    @id = Random.rand(1...100_00)
     @name = name
-    @id = id
     @age = age
     @parent_permission = parent_permission
     @rental = []
