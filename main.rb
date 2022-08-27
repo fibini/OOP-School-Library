@@ -4,6 +4,7 @@
 # Lets users choose an option.
 # If needed, ask for parameters for the option.
 # Have a way to quit the app.
+require 'pry'
 require './app'
 require './book'
 require './student'
@@ -55,7 +56,7 @@ class Main
     end
   end
 
-  def add(option)
+  def add(opton)
     case option
     when 4
       create_book
@@ -67,6 +68,7 @@ class Main
       option_three
       main
     end
+    binding.pry
   end
 
   def option_three
